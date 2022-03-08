@@ -26,7 +26,20 @@ print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.") 
 
 direction = input("You\' at a crossroad. Do you want to go left or right?")
-if direction == left:
- print("ok")
+direction =  direction.lower()
+if direction == "right":
+ print("You fell in a ditch. Game Over!")
 else:
- print("over")
+ action = input("Do you want to swim or wait?")
+ action = action.lower()
+if action == "swim":
+  print("You got attacked by a trout. Game over!")
+else:
+ door = input("Which door do you want to open? Red, Blue or Yellow")
+ door = door.lower()
+if door == "red":
+  print("Burned by fire. Game Over!")
+elif door == "blue":
+  print("Eaten by beasts. Game Over!")
+else:
+  print("You Win!!")
